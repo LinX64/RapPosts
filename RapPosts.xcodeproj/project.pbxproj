@@ -15,8 +15,10 @@
 		82A894CA2992EF8A00BBE1E8 /* RapPostsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A894C92992EF8A00BBE1E8 /* RapPostsUITests.swift */; };
 		82A894CC2992EF8A00BBE1E8 /* RapPostsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A894CB2992EF8A00BBE1E8 /* RapPostsUITestsLaunchTests.swift */; };
 		82A894DA2992F04200BBE1E8 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A894D92992F04200BBE1E8 /* HomeTab.swift */; };
-		82A894DC2992F15600BBE1E8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A894DB2992F15600BBE1E8 /* Data.swift */; };
+		82A894DC2992F15600BBE1E8 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A894DB2992F15600BBE1E8 /* PostsRepository.swift */; };
 		82A894DE2992F19000BBE1E8 /* FavouritesTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A894DD2992F19000BBE1E8 /* FavouritesTab.swift */; };
+		82FF06802B1C24F1002972A8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FF067F2B1C24F1002972A8 /* Consts.swift */; };
+		82FF06832B1C25E3002972A8 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FF06822B1C25E3002972A8 /* NewsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		82A894C92992EF8A00BBE1E8 /* RapPostsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapPostsUITests.swift; sourceTree = "<group>"; };
 		82A894CB2992EF8A00BBE1E8 /* RapPostsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapPostsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82A894D92992F04200BBE1E8 /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
-		82A894DB2992F15600BBE1E8 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		82A894DB2992F15600BBE1E8 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
 		82A894DD2992F19000BBE1E8 /* FavouritesTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTab.swift; sourceTree = "<group>"; };
+		82FF067F2B1C24F1002972A8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		82FF06822B1C25E3002972A8 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +105,12 @@
 		82A894AC2992EF8900BBE1E8 /* RapPosts */ = {
 			isa = PBXGroup;
 			children = (
+				82FF067C2B1C2417002972A8 /* data */,
 				82A894D82992F03300BBE1E8 /* ui */,
 				82A894AD2992EF8900BBE1E8 /* RapPostsApp.swift */,
-				82A894AF2992EF8900BBE1E8 /* ContentView.swift */,
 				82A894B12992EF8A00BBE1E8 /* Assets.xcassets */,
 				82A894B32992EF8A00BBE1E8 /* RapPosts.entitlements */,
 				82A894B42992EF8A00BBE1E8 /* Preview Content */,
-				82A894DB2992F15600BBE1E8 /* Data.swift */,
 			);
 			path = RapPosts;
 			sourceTree = "<group>";
@@ -140,10 +143,45 @@
 		82A894D82992F03300BBE1E8 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				82A894AF2992EF8900BBE1E8 /* ContentView.swift */,
 				82A894D92992F04200BBE1E8 /* HomeTab.swift */,
 				82A894DD2992F19000BBE1E8 /* FavouritesTab.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		82FF067C2B1C2417002972A8 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				82FF06812B1C25D5002972A8 /* model */,
+				82FF067E2B1C24DC002972A8 /* repository */,
+				82FF067D2B1C24D0002972A8 /* util */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		82FF067D2B1C24D0002972A8 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				82FF067F2B1C24F1002972A8 /* Consts.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		82FF067E2B1C24DC002972A8 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				82A894DB2992F15600BBE1E8 /* PostsRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		82FF06812B1C25D5002972A8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				82FF06822B1C25E3002972A8 /* NewsResponse.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A894DA2992F04200BBE1E8 /* HomeTab.swift in Sources */,
+				82FF06802B1C24F1002972A8 /* Consts.swift in Sources */,
 				82A894B02992EF8900BBE1E8 /* ContentView.swift in Sources */,
 				82A894AE2992EF8900BBE1E8 /* RapPostsApp.swift in Sources */,
-				82A894DC2992F15600BBE1E8 /* Data.swift in Sources */,
+				82A894DC2992F15600BBE1E8 /* PostsRepository.swift in Sources */,
+				82FF06832B1C25E3002972A8 /* NewsResponse.swift in Sources */,
 				82A894DE2992F19000BBE1E8 /* FavouritesTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
