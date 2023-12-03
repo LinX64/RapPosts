@@ -8,7 +8,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Home", systemImage: "list.dash")
                     }
-                FavouritesTab()
+                FavoritesTab()
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
